@@ -24,10 +24,11 @@ main{
 }
 #img1{
 position: absolute;
-width: 130px;
-height: 188px;
+max-width: 130px;
+max-height: 188px;
 background: url(../assets/img1.png);
 bottom: 0;
+background-size: cover;
 }
 #img2{
 position: absolute;
@@ -36,6 +37,7 @@ height: 188px;
 background: url(../assets/img2.png);
 bottom: 0;
 left: 130px;
+background-size: cover;
 }
 #img3{
 position: absolute;
@@ -44,6 +46,7 @@ height: 188px;
 background: url(../assets/img3.png);
 bottom: 0;
 right: 0;
+background-size: cover;
 }
 #img4{
 position: absolute;
@@ -51,6 +54,7 @@ width: 154px;
 height: 130px;
 background: url(../assets/img4.png);
 bottom: 188px;
+background-size: cover;
 }
 h1{
 position: absolute;
