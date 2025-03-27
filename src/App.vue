@@ -1,33 +1,34 @@
 <template>
-  <div>
-    <!-- <RouterLink class="nav" to="/">Главная</RouterLink> -->
-    <RouterView />
-  </div>
-  
+    <RouterLink class="nav" to="/">Главная</RouterLink>
+    <RouterLink class="nav" to="/bio">Биография</RouterLink>
+  <RouterView/>
 </template>
 <script setup>
 
 </script>
 
 <style>
-/* #app{
-    width: 375px;
-    height: 667px;
-    background-color: blueviolet;
-    padding-top: 20px;
-} */
+body{
+  margin: 0;
+}
+#app{
+  box-sizing: border-box;
+  background: #DBDBDB;
+  border: 25px solid #CCCACA;
+  min-height: 100vh;
+  padding: 3vw;
+}
 .nav{
-  background-color: rgb(27, 21, 49);
-  font-size: 40px;
+  margin-right: 2vw;
+  position: static;
+  font-size: 7vw;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-right: 30px;
-  color: rgb(197, 188, 188);
+  
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.2vw #272727;
   text-decoration: none;
   border-radius: 25px;
   padding: 10px;
-}
-div{
-  width: 375px;
-  height: 667px;
+  background: #999999;
 }
 </style>
