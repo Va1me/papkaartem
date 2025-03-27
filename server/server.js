@@ -4,7 +4,7 @@ const app = express();
 // const mysql = require("mysql2");
 // const connection = require('./app/models/Record')
 
-app.set('port', 443);
+app.set('port', 80);
 app.listen(app.get('port'), () => {
     // console.log('Сервер успешно запущен на порту ' + app.get('port') + ' и подключена база данных ' + connection.config.database)
 })
