@@ -15,6 +15,15 @@
     </div>
   </div>
   <RouterView />
+  <div id="bottomInfo">
+    <img id="bottomImg" src="./assets/bottom.png" alt="">
+    <a id="bottomLink" href="https://vk.com/papkaartem">
+      <div id="vkLink">
+        <img src="./assets/vk.png" alt="">
+        <p>vk.com/papkaartem</p>
+      </div>
+    </a>
+  </div>
 </template>
 <script setup>
 import { setInterval } from 'core-js';
@@ -58,8 +67,7 @@ body {
 }
 
 #app {
-  background: #DBDBDB;
-  min-height: 100vh;
+  background: #adadad;
 }
 
 .nav {
@@ -87,6 +95,14 @@ body {
   top: 0;
   opacity: 1;
   z-index: 999;
+}
+#bottomInfo{
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  height: 30vw;
+  background-color: #141414;
+  z-index: 998;
 }
 
 #threeLines {
@@ -134,5 +150,29 @@ body {
   width: 100vw;
   height: 15vw;
   backdrop-filter: blur(0.08vw);
+}
+#bottomImg{
+  margin-left: 20vw;
+  height: 100%;
+}
+#vkLink img{
+  height: 60%;
+  position: absolute;
+  margin-top: 6vw;
+  margin-left: 32vw;
+}
+#vkLink p{
+  top: 0;
+  position: absolute;
+  margin-top: 12vw;
+  margin-left: 52vw;
+  color: rgb(255, 255, 255);
+  font-size: 5vw;
+}
+#vkLink{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 </style>
