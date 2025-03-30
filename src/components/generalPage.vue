@@ -1,8 +1,5 @@
 <template>
     <div id="page">
-        <h1 id="textH1" class="text">Папка Артём<br>
-успешный программист, спортсмен,<br>
-филантроп, да и вообщем хороший человек</h1>
 <img id="img1" src="../assets/img4.png" alt="">
 <p class="text">
 Артём Папка – имя, которое гремит в мире IT,<br>
@@ -67,15 +64,9 @@ font-weight: 700;
 font-size: 2vw;
 }
 #page{
-top: 3vw;
+top: 24vw;
 position: relative;
 } 
-#textH1{
-margin-left: auto;
-margin-right: auto;
-text-align: center;
-margin-bottom: 4vw;
-}
 #img1{
    height: 16vw; 
 }

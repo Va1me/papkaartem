@@ -1,47 +1,83 @@
 <template>
-    <div id="header">
-      <img id="threeLines" src="./assets/threeLines.png" alt="" v-on:click="LeftPanel=!LeftPanel">
-      <img id="headerText" src="./assets/ArtemPapka.png" alt="">
+  <div id="header">
+    <img id="threeLines" src="./assets/threeLines.png" alt="" v-on:click="leftPanel();" an>
+    <img id="headerText" src="./assets/ArtemPapka.png" alt="">
+  </div>
+  <div id="leftPanel" v-show="LeftPanel">
+    <RouterLink class="nav" to="/" v-on:click="leftPanel()">Главная</RouterLink>
+    <RouterLink class="nav" to="/bio" v-on:click="leftPanel()">Биография</RouterLink>
+  </div>
+  <div id="topDiv">
+    <div id="textH1Div">
+      <h1 id="textH1" class="text">Папка Артём<br>
+        успешный программист, спортсмен,<br>
+        филантроп, да и вообщем хороший человек</h1>
     </div>
-    <div id="leftPanel" v-show="LeftPanel">
-      <RouterLink class="nav" to="/">Главная</RouterLink>
-      <RouterLink class="nav" to="/bio">Биография</RouterLink>
-    </div>
-  <RouterView/>
+  </div>
+  <RouterView />
 </template>
 <script setup>
+import { setInterval } from 'core-js';
 import { ref } from 'vue';
 
-let LeftPanel = ref(false);
+const LeftPanel = ref(true);
+const leftPanelLeft = ref(-25)
+let doLeftPanel = false;
+
+function leftPanel() {
+  if (!doLeftPanel) {
+    doLeftPanel = true;
+    if (leftPanelLeft.value <= -25) {
+      LeftPanel.value = true;
+      const intervalId = setInterval(() => {
+        leftPanelLeft.value += 0.5;
+        if (leftPanelLeft.value >= 0) {
+          doLeftPanel = false;
+          clearInterval(intervalId);
+        }
+      }, 1)
+    }
+    else if (leftPanelLeft.value >= 0) {
+      const intervalId = setInterval(() => {
+        leftPanelLeft.value -= 0.5;
+        if (leftPanelLeft.value <= -25) {
+          LeftPanel.value = false;
+          doLeftPanel = false;
+          clearInterval(intervalId);
+        }
+      }, 1)
+    }
+    doLeftPanel = false;
+  }
+}
 </script>
 
 <style>
-body{
+body {
   margin: 0;
 }
-#app{
-  box-sizing: border-box;
+
+#app {
   background: #DBDBDB;
-  border: 25px solid #CCCACA;
   min-height: 100vh;
-  padding: 3vw;
 }
-.nav{
+
+.nav {
   display: block;
   position: relative;
   text-align: center;
   font-size: 4vw;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  
+
   color: rgb(255, 255, 255);
-  -webkit-text-stroke: 0.1vw #272727;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 12px;
   padding: 10px;
   background: #141414;
   margin: 2vw;
 }
-#header{
+
+#header {
   padding: 0;
   height: 6vw;
   position: fixed;
@@ -50,24 +86,53 @@ body{
   left: 0;
   top: 0;
   opacity: 1;
-  z-index: 899;
+  z-index: 999;
 }
-#threeLines{
+
+#threeLines {
   margin: 0;
   height: 6vw;
   position: absolute;
 }
-#headerText{
-display: block;
-margin: auto;
-height: 5vw;
+
+#headerText {
+  display: block;
+  margin: auto;
+  height: 5vw;
 }
-#leftPanel{
+
+#leftPanel {
+  width: 25vw;
   position: fixed;
   background-color: #4d4d4d;
-  z-index: 999;
-  left: 0;
-  top: 6vw;
+  z-index: 899;
+  left: v-bind(leftPanelLeft + 'vw');
+  top: v-bind(leftPanelLeft+6 + 'vw');
   border-bottom-right-radius: 1vw;
+}
+
+#topDiv {
+  position: absolute;
+  top: 6vw;
+  left: 0;
+  width: 100vw;
+  height: 15vw;
+  background-image: url(./assets/codes.jpg);
+  background-size: auto 100%;
+}
+
+#textH1 {
+  text-align: center;
+  font-size: 3vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+
+#textH1Div {
+  position: absolute;
+  width: 100vw;
+  height: 15vw;
+  backdrop-filter: blur(0.08vw);
 }
 </style>
