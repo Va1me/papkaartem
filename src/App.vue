@@ -102,7 +102,7 @@ body {
 }
 
 #leftPanel {
-  width: 25vw;
+  width: 30vw;
   position: fixed;
   background-color: #4d4d4d;
   z-index: 899;
