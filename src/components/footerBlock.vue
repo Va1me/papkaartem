@@ -9,8 +9,7 @@
   
   <style scoped>
   #footerBlock{
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
     width: 100vw;
     height: 25vw;
     background-color: #141414;

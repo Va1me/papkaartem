@@ -1,7 +1,7 @@
 <template>
   <header><headerBlock></headerBlock></header>
   <RouterView />
-  <footer><footerBlock></footerBlock></footer>
+  <footerBlock></footerBlock>
 </template>
 <script setup>
 import footerBlock from './components/footerBlock.vue';
@@ -15,7 +15,9 @@ body {
 #app {
   padding-top: 6vw;
   background: #adadad;
-  min-height: 100vh;
   position: relative;
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh; 
 }
 </style>
