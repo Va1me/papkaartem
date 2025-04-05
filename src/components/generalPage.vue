@@ -1,5 +1,9 @@
 <template>
-   <div id="page">
+      <div id="topDiv">
+      <h1 id="textH1" class="text">Папка Артём<br>
+        успешный программист, спортсмен,<br>
+        филантроп, да и вообщем хороший человек</h1>
+    </div>
       <div class="cards">
          <img id="img1" src="../assets/img4.png" alt="">
          <p class="text">
@@ -42,7 +46,6 @@
             хочется знать лично, учиться у него и стремиться стать хотя бы немного похожим на него. 🙋‍♂️👨‍🏫
          </p>
       </div>
-   </div>
 </template>
 
 <script setup>
@@ -61,22 +64,17 @@ img {
    padding-left: 2vw;
    padding-top: 1vw;
    font-weight: 700;
-   font-size: 2.7vw;
+   font-size: 2.6vw;
 }
 
 .cards {
-   margin: 0 auto 6vw auto;
+   margin: 6vw auto 6vw auto;
    width: 75vw;
    height: 50vw;
    background-color: #bbbaba;
    -webkit-box-shadow: 25px 18px 14px 5px rgba(34, 60, 80, 0.2);
    -moz-box-shadow: 25px 18px 14px 5px rgba(34, 60, 80, 0.2);
    box-shadow: 25px 18px 14px 5px rgba(34, 60, 80, 0.2);
-}
-
-#page {
-   position: relative;
-   padding-top: 25vw;
 }
 
 #img1 {
@@ -100,5 +98,21 @@ margin-right: 1vw;
    float: right;
    margin-left: 1vw;
 }
+#topDiv {
+  height: 15vw;
+  background-image: url(../assets/codes.jpg);
+  background-size: auto 50vw;
+}
 
+#textH1 {
+  padding: 0;
+  text-align: center;
+  font-size: 3vw;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+  width: 100vw;
+  height: 15vw;
+  backdrop-filter: blur(0.15vw);
+}
 </style>
