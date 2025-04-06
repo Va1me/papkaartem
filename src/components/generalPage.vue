@@ -54,7 +54,7 @@
 
 <style scoped>
 img {
-   height: 100%;
+   height: 35vw;
 }
 
 .text {
@@ -70,7 +70,6 @@ img {
 .cards {
    margin: 6vw auto 6vw auto;
    width: 75vw;
-   height: 50vw;
    background-color: #bbbaba;
    -webkit-box-shadow: 25px 18px 14px 5px rgba(34, 60, 80, 0.2);
    -moz-box-shadow: 25px 18px 14px 5px rgba(34, 60, 80, 0.2);
@@ -80,7 +79,6 @@ img {
 #img1 {
    float: right;
    margin-left: 1vw;
-   height: 65%;
 }
 #img2{
 float: left;
@@ -112,7 +110,6 @@ margin-right: 1vw;
   color: rgb(255, 255, 255);
   font-weight: 900;
   width: 100vw;
-  height: 15vw;
   backdrop-filter: blur(0.1vw);
 }
 </style>

@@ -6,14 +6,15 @@
     <div id="leftPanel" v-show="LeftPanel">
       <RouterLink class="nav" to="/" v-on:click="leftPanel()">Главная</RouterLink>
       <RouterLink class="nav" to="/bio" v-on:click="leftPanel()">Биография</RouterLink>
-      <RouterLink class="nav" to="/comm" v-on:click="leftPanel()">комментариифы</RouterLink>
+      <RouterLink class="nav" to="/comm" v-on:click="leftPanel()">Комментарии</RouterLink>
+      <RouterLink class="nav" to="/devs" v-on:click="leftPanel()">Разработчики</RouterLink>
     </div>
   </template>
   <script setup>
   import { setInterval } from 'core-js';
   import { ref } from 'vue';
   
-  const LeftPanel = ref(true);
+  const LeftPanel = ref(false);
   const leftPanelLeft = ref(-25)
   let doLeftPanel = false;
   
@@ -85,7 +86,6 @@
   }
   
   #leftPanel {
-    width: 30vw;
     position: fixed;
     background-color: #4d4d4d;
     z-index: 899;
