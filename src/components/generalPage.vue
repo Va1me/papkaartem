@@ -113,6 +113,6 @@ margin-right: 1vw;
   font-weight: 900;
   width: 100vw;
   height: 15vw;
-  backdrop-filter: blur(0.15vw);
+  backdrop-filter: blur(0.1vw);
 }
 </style>

@@ -6,6 +6,7 @@
     <div id="leftPanel" v-show="LeftPanel">
       <RouterLink class="nav" to="/" v-on:click="leftPanel()">Главная</RouterLink>
       <RouterLink class="nav" to="/bio" v-on:click="leftPanel()">Биография</RouterLink>
+      <RouterLink class="nav" to="/comm" v-on:click="leftPanel()">комментариифы</RouterLink>
     </div>
   </template>
   <script setup>
